@@ -5,6 +5,7 @@ import Summery from "./components/summery";
 import Counter from "./components/counter";
 import Effect from "./components/useeffect";
 import Friends from "./components/friends";
+import Click from "./components/Click";
 
 const friends = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -21,13 +22,15 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
-      <Suspense fallback={<h1>loading.........</h1>}>
+        <Click></Click>
+
+      <Suspense fallback={<h1 className="text-4xl font-bold text-fuchsia-700">loading.........</h1>}>
         <Friends friendsData={friendsData}></Friends>
       </Suspense>
       <Effect></Effect>
       <Counter></Counter>
 
-      <Suspense fallback={<h2>Load hoccheee!!!</h2>}>
+      <Suspense fallback={<h2 className="text-4xl font-bold text-fuchsia-700">Load hoccheee!!!</h2>}>
         <Summery userData={userData}></Summery>
       </Suspense>
       <Batsman></Batsman>

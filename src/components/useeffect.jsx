@@ -7,13 +7,12 @@ export default function Effect() {
       .then((res) => res.json())
       .then((data) => setPlayers(data));
   }, []);
-  console.log(players);
   return (
     <div>
       <h1>total player : {players.length}</h1>
       <div>
         {players.map((player)=>(
-            <h3>name : {player.name}</h3>
+            <h3 key={player.id}>name : {player.name}</h3>
         ))}
       </div>
     </div>

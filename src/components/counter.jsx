@@ -15,11 +15,29 @@ export default function Counter() {
     setCounter(updatedValue);
   };
   return (
-    <div className="user">
-      <h1>count: {counter}</h1>
-      <button onClick={addOne}>+1</button>
-      <button onClick={minusOne}>-1</button>
-      <button onClick={resetAll}>Reset all</button>
+    <div className="user flex items-center justify-center flex-col">
+      <h1 className="text-6xl font-bold text-pink-600">count: {counter}</h1>
+      <div>
+        <button
+          className="bg-lime-500 hover:bg-gray-400 hover:text-blue-700 rounded-xl text-rose-600 p-5 m-2"
+          onClick={minusOne}
+        >
+          -1
+        </button>
+
+        <button
+          className="bg-lime-500 hover:bg-gray-400 hover:text-blue-700  rounded-xl text-rose-600 p-5 m-2"
+          onClick={resetAll}
+        >
+          Reset all
+        </button>
+        <button
+          className="bg-lime-500 hover:bg-gray-400 hover:text-blue-700  rounded-xl text-rose-600 p-5 m-2"
+          onClick={addOne}
+        >
+          +1
+        </button>
+      </div>
     </div>
   );
 }

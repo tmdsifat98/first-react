@@ -8,7 +8,7 @@ export default function Summery({ userData }) {
       <h1>total user : {users.length}</h1>
       <div >
         {users.map((user) => (
-          <div className="user">
+          <div key={user.id} className="bg-lime-400 my-2 w-fit">
             <p>user Id: {user.id}</p>
             <h2>username: {user.name}</h2>
             <h3>email: {user.email}</h3>
